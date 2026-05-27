@@ -1,40 +1,64 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f6f8;
-}
-
-.container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 30px;
-}
-
-h1 {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
   color: #1f2937;
 }
 
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 25px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.container>p {
+  color: #6b7280;
+  margin-bottom: 28px;
+}
+
 form {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
   display: grid;
   grid-template-columns: repeat(4, 1fr) auto;
-  gap: 10px;
+  gap: 12px;
   margin-bottom: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
 
 input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #2563eb;
 }
 
 button {
-  padding: 10px 14px;
+  padding: 11px 16px;
   border: none;
-  border-radius: 6px;
+  border-radius: 10px;
   background: #2563eb;
   color: white;
+  font-weight: 600;
   cursor: pointer;
-  margin-right: 6px;
+  transition: background 0.2s ease;
+}
+
+.card button {
+  margin-top: 10px;
+  margin-right: 8px;
 }
 
 button:hover {
@@ -44,17 +68,53 @@ button:hover {
 .productos-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+  gap: 18px;
 }
 
 .card {
   background: white;
-  padding: 18px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 22px;
+  border-radius: 18px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid #2563eb;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #111827;
+}
+
+.card p {
+  margin: 8px 0;
 }
 
 .alerta {
   color: #dc2626;
   font-weight: bold;
+  background: #fee2e2;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.card button:last-child {
+  background: #dc2626;
+}
+
+.card button:last-child:hover {
+  background: #b91c1c;
+}
+
+@media (max-width: 900px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  .productos-grid {
+    grid-template-columns: 1fr;
+  }
 }
