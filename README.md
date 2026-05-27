@@ -1,16 +1,48 @@
-# React + Vite
+# Inventario Smart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sistema web desarrollado en React para gestionar productos y controlar inventario mediante microservicio REST.
 
-Currently, two official plugins are available:
+## Problema
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Muchas pequeñas empresas no cuentan con un sistema sencillo para controlar productos, stock y estado de inventario.
 
-## React Compiler
+## Solución
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+La aplicación permite administrar productos mediante operaciones CRUD conectadas a microservicios desplegados en la nube.
 
-## Expanding the ESLint configuration
+## Funcionalidades
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Listar productos
+- Crear productos
+- Editar productos
+- Eliminación lógica
+- Alertas de stock bajo
+
+## Tecnologías
+
+Frontend:
+- React
+- Vite
+- CSS
+
+Backend:
+- Spring Boot
+- Java
+- PostgreSQL
+
+Cloud:
+- Render
+- Vercel
+- Neon DB
+
+## Arquitectura
+
+Frontend React conectado a un microservicio backend REST desplegado en Render.
+
+## Deploy
+
+Frontend:
+https://inventario-smart-front.vercel.app
+
+Backend:
+https://ms-productos-3orp.onrender.com/api/productos
